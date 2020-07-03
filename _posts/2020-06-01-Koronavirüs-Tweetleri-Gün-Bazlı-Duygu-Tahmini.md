@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Koronavirüs Tweetleri Gün Bazlı Duygu Tahmini
 excerpt_separator: <!--devam-->
 ---
