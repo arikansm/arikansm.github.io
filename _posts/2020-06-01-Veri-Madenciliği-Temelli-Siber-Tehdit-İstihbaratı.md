@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Veri Madenciliği Temelli Siber Tehdit İstihbaratı
+description: blog yazısı
 excerpt_separator: <!--devam-->
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Koronavirüs Tweetleri Gün Bazlı Duygu Tahmini
+description: blog yazısı
 excerpt_separator: <!--devam-->
 ---
 
