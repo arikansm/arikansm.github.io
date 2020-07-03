@@ -1,4 +1,0 @@
----
-layout: posts_index
----
-
