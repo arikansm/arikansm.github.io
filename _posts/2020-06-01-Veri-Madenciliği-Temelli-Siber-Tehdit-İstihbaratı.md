@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Veri Madenciliği Temelli Siber Tehdit İstihbaratı
 excerpt_separator: <!--devam-->
 ---

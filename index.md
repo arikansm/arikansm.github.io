@@ -1,5 +1,5 @@
 ---
-layout: posts_index
+layout: default
 ---
 
 <ul>
