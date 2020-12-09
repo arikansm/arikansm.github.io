@@ -1,2 +1,2 @@
 # arikansm.github.io
-Kişisel blogdur: https://arikansm.github.io
+Blog: https://arikansm.github.io
