@@ -13,8 +13,10 @@ excerpt_separator: <!--devam-->
 date: 2020-06-01T00:00:00Z
 ---
 
-Koronavirüs ile ilişkili olarak paylaşılacak ingilizce tweetler arasındaki duygu dağılımını tahmin edecek bir uygulama üzerine çalışma gerçekleştirilerek yaklaşık olarak 190 satırdan oluşan kaynak kodları geliştirilmiştir. Çalışma ile; prophet algoritması ve nltk kütüphanesi ile gerekli önişlem adımları hakkında bilgi sahibi olunabilir. İlgili kaynak kodlarına, yan panelde ayrıntıları bulunan github deposu üzerinden ulaşılabilir.
+Koronavirüs ile ilişkili olarak paylaşılacak ingilizce tweetler arasındaki duygu dağılımını tahmin edecek bir uygulama üzerine çalışma gerçekleştirilerek yaklaşık olarak 190 satırdan oluşan kaynak kodları geliştirilmiştir. Çalışma ile; prophet algoritması ve nltk kütüphanesi ile gerekli önişlem adımları hakkında bilgi sahibi olunabilir.
 <!--devam-->
+
+İlgili kaynak kodlarına, yan panelde ayrıntıları bulunan github deposu üzerinden ulaşılabilir.
 
 Çalışma kapsamında 1 haftalık (13-19 Mart 2020) gerçek tweetler toplanmıştır. Yaklaşık 2,5 milyon tweet üzerinde gün bazlı duygu analizi gerçekleştirilerek 8. gün (20 Mart 2020) için paylaşılacak tweetler arasındaki duygu dağılımı tahmin edilmiştir. Duygu tahminleri için doğal dil işleme kütüphanlerinden nltk tercih edilirken, gelecek tahmini için zaman serisi analizi algoritmaları arasından prophet kullanılmıştır.  
 
