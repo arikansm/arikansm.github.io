@@ -1,2 +1,2 @@
 # arikansm.github.io
-Blog: https://arikansm.github.io
+OnePageAbout: https://arikansm.github.io
