@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Süleyman M. Arıkan</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css/dist/98.css">
+    <style>
+        body {
+            background-color: #C0C0C0;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .window {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            max-width: 700px;
+            background: linear-gradient(to right, red, yellow, green, blue);
+            margin: 0px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="firstWindow" class="window" style="width: 300px;">
+        <div class="title-bar">
+            <div class="title-bar-text">Hello!</div>
+            <div class="title-bar-controls">
+                <button aria-label="Close" id="firstWindow_Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+            <p>Welcome to my personal page!</p>
+            <section class="field-row" style="justify-content: flex-end">
+                <button id="firstWindow_Continue">Continue</button>
+            </section>
+        </div>
+    </div>
+
+    <div id="welcomeContent" class="content">
+        <h3>Süleyman M. Arıkan</h3>
+        <hr>
+        <label>Full-Stack Software Engineer &nbsp; 👨‍💻 &nbsp; &nbsp;| &nbsp; &nbsp; Expertise in AI &nbsp; 🤖 &nbsp; &nbsp; | &nbsp; &nbsp; PhD(c) in Computer Forensics &nbsp; 🕵️‍♂️</label>
+   
+        <br/>
+        <br/>
+        <br/>
+        <div class="field-row-stacked" style="max-width: 700px;">
+            <label for="text20">About</label>
+            <textarea id="text20" readonly rows="20">
+🎈 As his father was a computer teacher, Arıkan grew up with computers and consequently his curiosity about how programs are created gradually increased. During his secondary school years, of course with the help of his father, he started writing simple desktop applications using the visual basic programming language (not VB.Net but VB6) and also learned basics of using Microsoft Frontpage and Macromedia Flash 5. During his high school years, he made efforts to improve his programming skills and tried to learn some of the C-Family programming languages. Of course, as a result of all this, his interest in computer science increased day by day. Therefore, in 2010, he continued his higher education in the department of computer engineering to become a software engineer.
+
+📚 He graduated as the first ranked (highest GPA) student from the Faculty of Engineering, Pamukkale University in 2015. Due to his interest in the field of cyber security, Arıkan received his master's degree from Gazi University, Institute of Informatics, Department of Computer Forensics in 2019. For the same reason and to maximise his various computer science skills, he is continuing his education in the Ph.D. programme of the same university, same department. His academic interests lie in the field of artificial intelligence, and he has worked with data mining techniques in both his Bachelor of Science and Master of Science theses. He has also dealt with deep learning in his doctoral thesis.
+
+💼 Arıkan started working as a software engineer with Researcher title at the TÜBİTAK BİLGEM Cyber Security Institute in 2016. As of September 2023, because of his intention to work within more structured and defined processes, Arıkan requested to be transferred to the Software Technologies Research Institute which has achieved Level 5 in CMMI V2.0. In January 2024, he resigned from TÜBİTAK BİLGEM due to his desire to work for different domains/disciplines. He then joined Aselsan as a Lead Software Engineer.
+
+⚖️ Arıkan is practiced, experienced, and skillful in designing and coding (also refactoring old code base), administration of various SDLC tools, and leading cross-functional engineering teams. In addition, in the scope of software engineering, he has strong knowledge of processes, techniques, approaches, and implementation/application of improvements. Because of his interest in AI discipline and cyber security domain, Arıkan continues to produce academic/non-academic studies.
+            </textarea>
+        </div>
+         
+          <br/>
+          <br/>
+          <label>Employment Summary</label>
+          <div class="sunken-panel" style="height: 120px; max-width: 700px;">
+            <table class="interactive">
+              <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>Started</th>
+                    <th>Until</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>Aselsan</td>
+                    <td>Lead Software Enginner</td>
+                    <td>Jan 24</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>TUBITAK BILGEM</td>
+                    <td>Senior Expert Researcher</td>
+                    <td>Aug 22</td>
+                    <td>Jan 24</td> 
+                </tr>
+                <tr>
+                    <td>TUBITAK BILGEM</td>
+                    <td>Senior Researcher</td>
+                    <td>Oct 19</td>
+                    <td>Aug 22</td> 
+                </tr>
+                <tr>
+                    <td>TUBITAK BILGEM</td>
+                    <td>Researcher</td>
+                    <td>Feb 16</td>
+                    <td>Oct 19</td> 
+                </tr>
+                <tr>
+                    <td>Pamukkale University IT Department</td>
+                    <td>Parttime Software Developer</td>
+                    <td>Jul 13</td>
+                    <td>Nov 13</td> 
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <br/>
+          <br/>
+          <label>More Details:</label>
+          <button id="linkedin_Open">Linkedin</button> &nbsp; &nbsp; <button id="github_Open">Github</button>
+          <br/>
+          <br/>
+    </div>
+
+    <script>
+        document.getElementById("firstWindow_Close").addEventListener("click", function() {
+            document.getElementById("firstWindow").style.display = "none";
+            document.getElementById("welcomeContent").style.display = "block";
+        });
+
+        document.getElementById("firstWindow_Continue").addEventListener("click", function() {
+            document.getElementById("firstWindow").style.display = "none";
+            document.getElementById("welcomeContent").style.display = "block";
+        });
+
+        document.getElementById("linkedin_Open").addEventListener("click", function() {
+            window.open("https://www.linkedin.com/in/arikansm/", "_blank");
+        });
+
+        document.getElementById("github_Open").addEventListener("click", function() {
+            window.open("https://github.com/arikansm", "_blank");
+        });
+
+        document.querySelectorAll('table.interactive').forEach(element => {
+            element.addEventListener('click', (event) => {
+            const highlightedClass = 'highlighted';
+            const isRow = element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY';
+            const newlySelectedRow = event.composedPath().find(isRow);
+            const previouslySelectedRow = Array.from(newlySelectedRow.parentElement.children).filter(isRow).find(element => element.classList.contains(highlightedClass));
+            if(previouslySelectedRow){
+                previouslySelectedRow.classList.toggle(highlightedClass);
+            }
+
+            if (newlySelectedRow) {
+                newlySelectedRow.classList.toggle(highlightedClass);
+            }
+            })
+        });
+    </script>
+</body>
+</html>
