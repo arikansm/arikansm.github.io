@@ -52,7 +52,7 @@
             }
  
             .section {
-                margin-top: 20px;
+                margin-top: 0px;
             }
  
             .section p {
@@ -61,6 +61,14 @@
                 display: inline-block;
                 position: relative;
             }
+
+            .infohr {
+                margin-top: 20px;
+                margin-bottom: 25px;
+                color: rgb(233, 233, 233);
+                border-width: 0.5px;
+            }
+
             .read-more {
                 color: #0073b1;
                 cursor: pointer;
@@ -99,8 +107,8 @@
             .experience-list_same::before {
                 content: "";
                 position: absolute;
-                left: 15px;
-                top: 10px;
+                left: 14px;
+                top: 20px;
                 bottom: 10px;
                 width: 2px;
                 background-color: #7a7a7a;
@@ -151,6 +159,14 @@
                 background-color: #7a7a7a;
                 border-radius: 50%;
             }
+
+            header {
+                position: sticky;
+                top: 0;
+                background-color: white;
+                padding-top: 5px;
+                z-index: 1000; /* Üstte kalması için */
+            }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script>
@@ -186,7 +202,9 @@
  
         <div class="profile-section">
             <div class="section">
-                <h2>About</h2>
+                <header>
+                    <h2>About</h2>
+                </header>
                 <p>
                    🎈 As his father was a computer teacher, Arıkan grew up with computers and consequently his curiosity about how programs are created gradually increased. During his secondary school years, of course with the help of his father, he started writing simple desktop applications using the visual basic programming language (not VB.Net but VB6) and also learned basics of using Microsoft Frontpage and Macromedia Flash 5. During his high school years, he made efforts to improve his programming skills and tried to learn some of the C-Family programming languages. Of course, as a result of all this, his interest in computer science increased day by day. Therefore, in 2010, he continued his higher education in the department of computer engineering to become a software engineer.
                
@@ -207,13 +225,15 @@
  
         <div class="profile-section">
             <div class="section">
-                <h2>Experience</h2>
+                <header>
+                    <h2>Experience</h2>
+                </header>
                 <ul class="experience-list_diff">
                     <li class="experience-item_same">
                         Aselsan<br>
                         <em>Jan 2024 - Present <span id="aselsan_total">()</span></em><br><br>
                         <ul class="experience-list_same">
-                            <li class="experience-item_diff">
+                            <li class="experience-item_diff" style="background-color: white;">
                                 <strong>Lead Software Engineer</strong><br>
                                 <em>@Defense Systems Technologies</em><br>
                                 <em>Jan 2024 - Present <span id="aselsan_lswe">()</span></em><br>
@@ -222,6 +242,7 @@
                         </ul>
                     </li>
                 </ul>
+                <hr class="infohr"/>
                 <ul class="experience-list_diff">
                     <li class="experience-item_same">
                         TÜBİTAK BİLGEM<br>
@@ -239,7 +260,7 @@
                                 <em>Oct 2019 - Aug 2022 (2 yrs 11 mos)</em><br>
                                 <p>After acquiring the senior researcher title at the Cyber Security Institute, I mainly worked as a senior software engineer, software architect, tech lead, and/or scrum master in various R&D projects for a long time. I wanted to have experience in all processes of a software project. That's why, as well as working in the mentioned role(s), I also served as a risk manager, configuration manager and deputy project manager for two relatively small projects. In the last quarter of my time as a senior researcher, I started to work as a project technical leader and technical project manager (as well as senior software developer) for a software product family aimed at providing platforms for penetration testing and security audit.</p>
                             </li>
-                            <li class="experience-item_diff">
+                            <li class="experience-item_diff" style="background-color: white;">
                                 <strong>Researcher</strong><br>
                                 <em>@Cyber Security Institute</em><br>
                                 <em>Feb 2016 - Oct 2019 (3 yrs 9 mos)</em><br>
@@ -248,12 +269,13 @@
                         </ul>
                     </li>
                 </ul>
+                <hr class="infohr"/>
                 <ul class="experience-list_diff">
                     <li class="experience-item_same">
                         Global Teknik<br>
                         <em>Jul 2014 - Aug 2014 (2 mos)</em><br><br>
                         <ul class="experience-list_same">
-                            <li class="experience-item_diff">
+                            <li class="experience-item_diff" style="background-color: white;">
                                 <strong>Intern</strong><br>
                                 <em>Jul 2014 - Aug 2014 (2 mos)</em><br>
                                     <ul style="padding-left: 30px; padding-top: 15px; padding-bottom: 15px; list-style-type: disc;">
@@ -265,6 +287,7 @@
                         </ul>
                     </li>
                 </ul>
+                <hr class="infohr"/>
                 <ul class="experience-list_diff">
                     <li class="experience-item_same">
                         Pamukkale University IT Department<br>
@@ -279,7 +302,7 @@
                                         <li>Rebuilt existing database queries for performance improvement</li>
                                     </ul>
                             </li>
-                            <li class="experience-item_diff">
+                            <li class="experience-item_diff" style="background-color: white;">
                                 <strong>Intern</strong><br>
                                 <em>Jun 2013 - Jul 2013 (2 mos)</em><br>
                                     <ul style="padding-left: 30px; padding-top: 15px; padding-bottom: 15px; list-style-type: disc;">
@@ -296,7 +319,9 @@
  
         <div class="profile-section">
             <div class="section">
-                <h2>Education</h2>
+                <header>
+                    <h2>Education</h2>
+                </header>
                 <ul class="experience-list_diff">
                     <li class="experience-item_same">
                         Gazi University<br>
@@ -314,6 +339,7 @@
                             <br>
                             Advisor: Prof. Dr. Mustafa Alkan</p>
                     </li>
+                    <hr class="infohr"/>
                     <li class="experience-item_same">
                         Gazi University<br>
                         <strong>Master of Science - MS</strong><br>
@@ -331,6 +357,7 @@
                             <br>
                             Advisor: Assist. Prof. Dr. Sami Acar</p>
                     </li>
+                    <hr class="infohr"/>
                     <li class="experience-item_same">
                         Pamukkale University<br>
                         <strong>Bachelor of Science - BS</strong><br>
@@ -349,7 +376,9 @@
  
         <div class="profile-section">
             <div class="section">
-                <h2>Licenses & Certifications</h2>
+                <header>
+                    <h2>Licenses & Certifications</h2>
+                </header>
                 <ul class="experience-list_diff">
                     <li class="experience-item_same">
                         ISC2<br>
@@ -369,7 +398,9 @@
  
         <div class="profile-section">
             <div class="section" id="read-more-less-01">
-                <h2>Courses</h2>
+                <header>
+                    <h2>Courses</h2>
+                </header>
                 <ul class="experience-list_diff">
                     <li class="experience-item_same">
                         Aselsan Academy in collaboration with a Professor from Hacettepe University<br>
@@ -457,7 +488,9 @@
  
         <div class="profile-section">
             <div class="section">
-                <h2>Honors & Awards</h2>
+                <header>
+                    <h2>Honors & Awards</h2>
+                </header>
                 <ul class="experience-list_diff">
                     <li class="experience-item_same">
                         Presidency of the Republic of Türkiye - Defense Industry Agency<br>
@@ -465,12 +498,14 @@
                         <em>Issued Nov 2022</em><br>
                         <p>-</p>
                     </li>
+                    <hr class="infohr"/>
                     <li class="experience-item_same">
                         Presidency of the Republic of Türkiye - Digital Transformation Office<br>
                         <strong>the Information and Communication Security Guide signed with a special thank-you message</strong><br>
                         <em>Issued Jul 2020</em><br>
                         <p>As a gift, the Information and Communication Security Guide hard copy signed by the head of the Digital Transformation Office with a special thank-you message for my contribution in the preparation of the first published version of the guide</p>
                     </li>
+                    <hr class="infohr"/>
                     <li class="experience-item_same">
                         Pamukkale University<br>
                        <strong>First Ranked (highest GPA) Graduate in Faculty of Engineering & Valedictorian</strong><br>
