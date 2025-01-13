@@ -66,7 +66,9 @@
                 margin-top: 20px;
                 margin-bottom: 25px;
                 color: rgb(233, 233, 233);
-                border-width: 0.5px;
+                border: 1px solid;
+                border-radius: 5px;
+                width: 95%;
             }
 
             .read-more {
@@ -180,6 +182,9 @@
  
                 const read_more_less_01 = document.getElementById("read-more-less-01");
                 addMoreAndLessButtons(read_more_less_01, 1320);
+
+                const read_more_less_02 = document.getElementById("read-more-less-02");
+                addMoreAndLessButtons(read_more_less_02, 2300);
  
                 document.getElementById('aselsan_total').textContent = "(" + calculateDateRange("01/01/2024", new Date().toString()) + ")";
                 document.getElementById('aselsan_lswe').textContent = "(" + calculateDateRange("01/01/2024", new Date().toString()) + ")";
@@ -345,7 +350,6 @@
                         <strong>Master of Science - MS</strong><br>
                         <em>Computer Forensics (3.79/4)</em><br>
                         <em>2016 - 2019</em><br>
-                        <em></em><br>
                         <p>
                             I have received my master's degree in this program as I wanted to gain further knowledge in the field of computer science, especially cyber security.
                             <br><br>
@@ -392,6 +396,84 @@
                         <em>Issued Mar 2023 - Expires Mar 2026</em><br>
                         <a href="https://www.credly.com/badges/5c74a22c-73b1-42d4-951b-f9a8b23f666a/public_url" target="_blank">Show credential</a>
                     </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <div class="section" id="read-more-less-02">
+                <header>
+                    <h2>Projects</h2>
+                </header>
+                <ul class="experience-list_diff">
+                    <li class="experience-item_same">
+                        <strong>Before My Professional Career</strong><br>
+                        <ul style="padding-left: 20px; padding-top: 15px; padding-bottom: 0px; list-style-type: '→&nbsp;';">
+                            <li>During my secondary and high school years, I worked on/with the following technologies:
+                                <ul style="padding-left: 20px; padding-top: 15px; padding-bottom: 0px; list-style-type: '•&nbsp;';">
+                                    <li>Simple desktop applications using VB6</li>
+                                    <li>Microsoft Frontpage</li>
+                                    <li>Macromedia Flash 5 (also ActionScript)</li>
+                                    <li>C & C++ (mostly C)</li>
+                                </ul>
+                            </li>
+                            <li>In my internship programmes and the part-time employment, I experienced the following technologies:
+                                <ul style="padding-left: 20px; padding-top: 15px; padding-bottom: 0px; list-style-type: '•&nbsp;';">
+                                    <li> WinForms (on .NET Framework)</li>
+                                    <li>Microsoft SQL Server</li>
+                                    <li>Macromedia Flash 5 (also ActionScript)</li>
+                                    <li>ASP.NET (with Telerik)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <hr class="infohr"/>
+                    <li class="experience-item_same">
+                        <strong>Software Development Projects</strong><br>
+                        
+                        <br>I have experience in software development, project management, configuration management, risk management, infrastructure management, and software process improvement in various large-scale software projects (mostly agile software development-scrum/kanban).<br>
+                        
+                        <ul style="padding-left: 20px; padding-top: 15px; padding-bottom: 0px; list-style-type: '→&nbsp;';">
+                            <li>I have administrator skills on Atlassian Tools (Jira, Confluence, Bitbucket, and Crowd)</li>
+                            <li>I have strong experience on Dev(Sec)Ops life cycle and tools: Jenkins, Docker, Kubernetes, Splunk, Clair, Sonarqube, etc. (and many linters)</li>
+                            <br>
+                            <li>@TUBITAK-BILGEM-CSI, I served [as] in [project] by using [technology]:
+                                <ul style="padding-left: 20px; padding-top: 15px; padding-bottom: 0px; list-style-type: '•&nbsp;';">
+                                    <li>[<b>as software engineer </b>] central log monitoring system (for distributed honeypots) by using PHP with Zend Framework (one of the MVC Frameworks).</li>
+                                    <li>[<b>as software engineer </b>] microservice based cloud orchestration system by using Ansible, Terraform, Kubernetes, Openstack and Python with Flask in a CICD environment.</li>
+                                    <li>[<b>as software engineer </b>] browser-based email client by using Java, C++, roundcube and digital signatures based on X.509 certificates in order to provide E2EE communication.</li>
+                                    <li>[<b>as senior software engineer </b>] forensic analysis tool by using Python and WPF (on .Net Framework) with Prism Library (one of the frameworks that includes the MVVM pattern, dependency injection, event aggregator, etc).</li>
+                                    <li>[<b>as scrum master</b> & <b>deputy project manager</b>] C++ library that provides functionality to monitor and, if necessary, block writing data to removable storage devices.</li>
+                                    <li>[<b>as senior software engineer</b> & <b>deputy project manager</b>] DLP & EDR platfrom with data discovery tool by using Java SE, Java with Spring Boot, C# (on .Net 5), C++14, and gRPC.</li>
+                                    <li>[<b>as project tech lead</b> & <b>technical project manager</b> (as well as <b>senior software developer</b>)] a software product family including:
+                                        <ul style="padding-left: 20px; padding-top: 15px; padding-bottom: 0px; list-style-type: '•&nbsp;';">
+                                            <li>critical infrastructure cyber attack platform with various universities (subcontractors), an R&D institution (business partner), and an institute from the defence industry (client)</li>
+                                            <li>(internally funded) attack automation platform by using ReactJS, Java with Spring Boot, Python, and Ansible in a CICD environment</li>
+                                            <li>penetration testing and security audit platform for both Information Technologies and Operational Technologies by using ReactJS, Java with Spring Boot, Python, and Ansible in a CICD environment</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>
+                                @TUBITAK-BILGEM-STRI, I served [as] in [project] by using [technology]:
+                                <ul style="padding-left: 20px; padding-top: 15px; padding-bottom: 0px; list-style-type: '•&nbsp;';">
+                                    <li>[<b>as senior software engineer</b>] common middleware platform to significantly reduce the application development costs of public institutions through ready-made components (worked in the scope of java code generation & application of devsecops principles).</li>
+                                    <li>[<b>as senior software engineer</b>] (worked very shortly) a system, which covers the financial processes of expenditure units and ensures full financial integration with accounting units, by using Java with Spring Boot.</li>
+                                </ul>
+                            </li>
+                            <br>
+                            <li>
+                                @ASELSAN, I served [as] for [project] by using [technology]:
+                                <ul style="padding-left: 20px; padding-top: 15px; padding-bottom: 0px; list-style-type: '•&nbsp;';">
+                                    <li>[<b>as lead software engineer</b>, as well as leader for various software work packages] a software product line and its products, which are at the restricted classification level, by using C# & WinForms (on .Net Framework) and by maintaining a NATO software library in a CICD environment.</li>
+                                    <li>[<b>as lead software engineer</b>] (part-time) an AI coding assistant, by using pre-trained models.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                    </li>
+                    <hr class="infohr"/>
                 </ul>
             </div>
         </div>
