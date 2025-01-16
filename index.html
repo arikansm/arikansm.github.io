@@ -171,30 +171,56 @@
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById('photo').src = getProfilePhotoData();
-                const paragraphs = document.querySelectorAll(".section p");
-                paragraphs.forEach(p => {
-                    addMoreAndLessButtons(p, 500);
-                });
-                const read_more_less_01 = document.getElementById("read-more-less-01");
-                addMoreAndLessButtons(read_more_less_01, 1320);
- 
-                const read_more_less_02 = document.getElementById("read-more-less-02");
-                addMoreAndLessButtons(read_more_less_02, 1200);
- 
-                const read_more_less_03 = document.getElementById("read-more-less-03");
-                addMoreAndLessButtons(read_more_less_03, 1250);
- 
-                const read_more_less_04 = document.getElementById("read-more-less-04");
-                addMoreAndLessButtons(read_more_less_04, 1200);
- 
-                const read_more_less_05 = document.getElementById("read-more-less-05");
-                addMoreAndLessButtons(read_more_less_05, 1250);
- 
-                const read_more_less_06 = document.getElementById("read-more-less-06");
-                addMoreAndLessButtons(read_more_less_06, 1200);
- 
-                const read_more_less_07 = document.getElementById("read-more-less-07");
-                addMoreAndLessButtons(read_more_less_07, 1200);
+                
+                const botUserAgents = 
+                [
+                            'googlebot',
+                            'googleother',
+                            'google-inspectiontool',
+                            'google-ınspectiontool',
+                            'bingbot',
+                            'linkedinbot',
+                            'mediapartners-google',
+                            'lighthouse',
+                            'insights',
+                ];
+
+                let isBotUserAgent = false;
+                for (var i = 0; i < botUserAgents.length; i++){
+                    if (window.navigator.userAgent.toLowerCase().indexOf(botUserAgents[i]) !== -1){
+                        isBotUserAgent = true;
+                        break;
+                    }
+                }
+
+                if (!isBotUserAgent) {
+                    const paragraphs = document.querySelectorAll(".section p");
+                    paragraphs.forEach(p => {
+                        addMoreAndLessButtons(p, 500);
+                    });
+
+                    const read_more_less_01 = document.getElementById("read-more-less-01");
+                    addMoreAndLessButtons(read_more_less_01, 1320);
+    
+                    const read_more_less_02 = document.getElementById("read-more-less-02");
+                    addMoreAndLessButtons(read_more_less_02, 1200);
+    
+                    const read_more_less_03 = document.getElementById("read-more-less-03");
+                    addMoreAndLessButtons(read_more_less_03, 1250);
+    
+                    const read_more_less_04 = document.getElementById("read-more-less-04");
+                    addMoreAndLessButtons(read_more_less_04, 1200);
+    
+                    const read_more_less_05 = document.getElementById("read-more-less-05");
+                    addMoreAndLessButtons(read_more_less_05, 1250);
+    
+                    const read_more_less_06 = document.getElementById("read-more-less-06");
+                    addMoreAndLessButtons(read_more_less_06, 1200);
+    
+                    const read_more_less_07 = document.getElementById("read-more-less-07");
+                    addMoreAndLessButtons(read_more_less_07, 1200);
+                }
+
                 document.getElementById('aselsan_total').textContent = "(" + calculateDateRange("01/01/2024", new Date().toString()) + ")";
                 document.getElementById('aselsan_lswe').textContent = "(" + calculateDateRange("01/01/2024", new Date().toString()) + ")";
             });
