@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Süleyman M. Arıkan</title>
         <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
             body {
                 font-family: Arial, sans-serif;
                 margin: 0;
@@ -168,6 +172,79 @@
                 padding-top: 5px;
                 z-index: 1000; /* Üstte kalması için */
             }
+
+            #backToTop {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                padding: 10px 15px;
+                font-size: 16px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                display: none;
+            }
+
+            /* Menü Konteyneri */
+            .menu-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .menu-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 40px;
+                max-width: 100%;
+            }
+
+            /* Menü Öğesi */
+            .menu-item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                width: 80px;
+                height: 80px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.2s, box-shadow 0.2s;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .menu-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            }
+
+            /* İkon Stili */
+            .menu-item i {
+                font-size: 40px;
+                color: #007bff;
+                margin-bottom: 10px;
+            }
+
+            /* Metin Stili */
+            .menu-item span {
+                font-size: 16px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            /* Responsive Tasarım */
+            @media (max-width: 768px) {
+                .menu-container {
+                    gap: 15px;
+                }
+            }
  
             @media print {
                 body {
@@ -188,6 +265,14 @@
                 }
  
                 .profile-link-div {
+                    display: none;
+                }
+
+                #backToTop {
+                    display: none;
+                }
+
+                .menu-wrapper {
                     display: none;
                 }
             }
@@ -251,6 +336,23 @@
                
                 window.onbeforeprint = before_print;
                 window.onafterprint = after_print;
+
+                const backToTopButton = document.getElementById("backToTop");
+
+                window.onscroll = function() {
+                    if (document.documentElement.scrollTop > 300) {
+                        backToTopButton.style.display = "block";
+                    } else {
+                        backToTopButton.style.display = "none";
+                    }
+                };
+        
+                backToTopButton.onclick = function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                };
             });
         </script>
         <script>
@@ -313,6 +415,12 @@
                 remove_personal_site_url()
             }
         </script>
+        <script>
+            function scrool(id){
+                var element = document.getElementById(id);
+                element.scrollIntoView();
+            }
+        </script>
     </head>
     <body>
         <div class="profile-section">
@@ -329,7 +437,51 @@
                 </div>
             </div>
         </div>
-        <div class="profile-section">
+        <div class="profile-section" style="background-color: transparent; box-shadow: none;">
+            <div class="section">
+                <div class="menu-wrapper">
+                    <div class="menu-container">
+                        <div class="menu-item" onclick="scrool('to_about')">
+                            <i class="fa fa-info-circle"></i>
+                            <span>About</span>
+                        </div>
+                        <div class="menu-item" onclick="scrool('to_experience')">
+                            <i class="fa fa-briefcase"></i>
+                            <span>Experience</span>
+                        </div>
+                        <div class="menu-item" onclick="scrool('to_education')">
+                            <i class="fa fa-graduation-cap"></i>
+                            <span>Education</span>
+                        </div>
+                        <div class="menu-item" onclick="scrool('to_licenses')">
+                            <i class="fa fa-certificate"></i>
+                            <span>Licenses & Certifications</span>
+                        </div>
+                        <div class="menu-item" onclick="scrool('to_projects')">
+                            <i class="fa fa-window-restore"></i>
+                            <span>Projects</span>
+                        </div>
+                        <div class="menu-item" onclick="scrool('to_volunteering')">
+                            <i class="fa fa-bookmark"></i>
+                            <span>Volunteering</span>
+                        </div>
+                        <div class="menu-item" onclick="scrool('to_publications')">
+                            <i class="fa fa-book"></i>
+                            <span>Publications</span>
+                        </div>
+                        <div class="menu-item" onclick="scrool('to_courses')">
+                            <i class="fa fa-cubes"></i>
+                            <span>Courses</span>
+                        </div>
+                        <div class="menu-item" onclick="scrool('to_honors')">
+                            <i class="fa fa-gift"></i>
+                            <span>Honors & Awards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="profile-section" id="to_about">
             <div class="section">
                 <header>
                     <h2>About</h2>
@@ -351,7 +503,7 @@
                 </p>
             </div>
         </div>
-        <div class="profile-section">
+        <div class="profile-section" id="to_experience">
             <div class="section">
                 <header>
                     <h2>Experience</h2>
@@ -444,7 +596,7 @@
                 </ul>
             </div>
         </div>
-        <div class="profile-section">
+        <div class="profile-section" id="to_education">
             <div class="section">
                 <header>
                     <h2>Education</h2>
@@ -499,7 +651,7 @@
                 </ul>
             </div>
         </div>
-        <div class="profile-section">
+        <div class="profile-section" id="to_licenses">
             <div class="section">
                 <header>
                     <h2>Licenses & Certifications</h2>
@@ -521,7 +673,7 @@
             </div>
         </div>
  
-        <div class="profile-section">
+        <div class="profile-section" id="to_projects">
             <div class="section">
                 <header>
                     <h2>Projects</h2>
@@ -694,7 +846,7 @@
                 </ul>
             </div>
         </div>
-        <div class="profile-section">
+        <div class="profile-section" id="to_volunteering">
             <div class="section">
                 <header>
                     <h2>Volunteering</h2>
@@ -768,7 +920,7 @@
                 </ul>
             </div>
         </div>
-        <div class="profile-section">
+        <div class="profile-section" id="to_publications">
             <div class="section">
                 <header>
                     <h2>Publications</h2>
@@ -982,7 +1134,7 @@
                 </ul>
             </div>
         </div>
-        <div class="profile-section">
+        <div class="profile-section" id="to_courses">
             <div class="section" id="read-more-less-01">
                 <header>
                     <h2>Courses</h2>
@@ -1071,7 +1223,7 @@
                 </ul>
             </div>
         </div>
-        <div class="profile-section">
+        <div class="profile-section"  id="to_honors">
             <div class="section">
                 <header>
                     <h2>Honors & Awards</h2>
@@ -1102,6 +1254,7 @@
                 </ul>
             </div>
         </div>
+        <button id="backToTop"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
     </body>
     <script>
         function addMoreAndLessButtons(p, limit=500){
